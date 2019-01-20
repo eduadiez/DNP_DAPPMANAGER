@@ -1,12 +1,15 @@
 # Ipfs module
 
-## API reference
+Wrapper of the existing IPFS client library `ipfs-http-client`. Provides additional functionality to handle timeout errors, retries and promisy methods.
 
-### Setup
+## How to use
 
-```javascript
-const ipfs = import 'modules/ipfs'
+```js
+const ipfs = require("modules/ipfs");
+const data = await ipfs.cat(hash, {maxSize: 100000});
 ```
+
+## API reference
 
 ### Cat
 

@@ -1,5 +1,59 @@
 # dappGet
 
+Guarantees DAppNode compatibility by resolving a specific request given the current installed DNPs in a DAppNode and the latest available versions of all DNPs.
+
+## How to use
+
+```js
+const dappGet = require("modules/dappGet");
+const req = {
+  name: "nginx-proxy.dnp.dappnode.eth",
+  ver: "^0.1.0"
+};
+const result = await dappGet(req);
+```
+
+### Parameters
+
+1.  `req` The package request {Object}
+
+```js
+req = {
+  name: "nginx-proxy.dnp.dappnode.eth",
+  ver: "^0.1.0"
+};
+```
+
+### Returns (on success)
+
+```js
+{
+    success: {
+        'bind.dnp.dappnode.eth': '0.1.4',
+        'ipfs.dnp.dappnode.eth': '0.1.3',
+        'ethchain.dnp.dappnode.eth': '0.1.4',
+        'ethforward.dnp.dappnode.eth': '0.1.1',
+        'vpn.dnp.dappnode.eth': '0.1.11',
+        'wamp.dnp.dappnode.eth': '0.1.0',
+        'admin.dnp.dappnode.eth': '0.1.6',
+        'dappmanager.dnp.dappnode.eth': '0.1.10',
+        'core.dnp.dappnode.eth': '/ipfs/Qmabuy2rTUEWA5jKyUKJmUDCH375e75tpUnAAwyi1PbLq1'
+    },
+    message: 'Found compatible state with case 1/256',
+}
+```
+
+### Returns (on error)
+
+```js
+{
+    success: false,
+    message: 'Could not find a compatible state. Packages x.dnp.dappnode.eth request incompatible versions of y.dnp.dappnode.eth. Checked 256/256 possible states.'
+}
+```
+
+---
+
 ## Introduction
 
 The goal of this module is to prevent breaking the compatibility of versions within installed DAppNode packages (DNPs). It ensures forward compatibility between the dependencies of the current request plus backwards compatility within already installed packages. Due to the size of the DNPs, only one single version of each DNP is installed at once, so all dependants must consume a single version of that dependency.

@@ -1,3 +1,3 @@
 # Utils
 
-A util can only depend on other utils or external npm packages.
+Utils that only depend on other utils or external npm packages.
