@@ -11,8 +11,7 @@ const db = require('../db');
  * }
  * @return {Object} A formated success message.
  */
-
-const notificationsGet = async ({
+const notificationsRemove = async ({
     ids = [],
 }) => {
     for (const id of ids) {
@@ -25,4 +24,4 @@ const notificationsGet = async ({
 };
 
 
-module.exports = notificationsGet;
+module.exports = notificationsRemove;

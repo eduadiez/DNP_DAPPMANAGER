@@ -2,7 +2,7 @@ const dappGet = require('modules/dappGet');
 const dappGetBasic = require('modules/dappGet/basic');
 
 /**
- * Remove package data: docker down + disk files
+ * Resolves the dependencies of a package request
  *
  * @param {Object} kwargs: {
  *   req: {
@@ -13,7 +13,7 @@ const dappGetBasic = require('modules/dappGet/basic');
  * @return {Object} A formated success message.
  * result: empty
  */
-const removePackage = async ({
+const resolveRequest = async ({
   req,
   options = {},
 }) => {
@@ -36,4 +36,4 @@ const removePackage = async ({
 };
 
 
-module.exports = removePackage;
+module.exports = resolveRequest;

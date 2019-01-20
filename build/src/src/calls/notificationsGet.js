@@ -14,7 +14,6 @@ const db = require('../db');
  *   }
  * }
  */
-
 const notificationsGet = async () => {
     const notifications = await db.get(`notification`) || {};
 

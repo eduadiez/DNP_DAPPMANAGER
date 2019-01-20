@@ -5,7 +5,7 @@ const params = require('../params');
  *
  * @return {Object}
  */
-const getStats = async ({timeout}) => {
+const changeIpfsTimeout = async ({timeout}) => {
     params.IPFS_TIMEOUT = timeout;
 
     return {
@@ -16,5 +16,5 @@ const getStats = async ({timeout}) => {
 };
 
 
-module.exports = getStats;
+module.exports = changeIpfsTimeout;
 

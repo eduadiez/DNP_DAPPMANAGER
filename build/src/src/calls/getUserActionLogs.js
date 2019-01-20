@@ -13,7 +13,6 @@ const params = require('params');
  * @return {Object} A formated success message.
  * result: = logs (string)
  */
-
 const getUserActionLogs = async ({
   options,
   fromLog = 0,
