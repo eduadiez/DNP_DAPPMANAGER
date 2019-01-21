@@ -3,7 +3,7 @@
 The **DNP_DAPPMANAGER** handles the DAppNode core DNPs and any installed DNPs. It also performs maintenance checks.
 
 - :bust_in_silhouette: For user / usage documentation go to the [user manual](https://dappnode.readthedocs.io/en/latest/user-manual.html#dappmanager)
-- :wrench: For developers check the [technical documentation](https://dappnode.readthedocs.io/en/latest/techincal-documentation.html#dappmanager)
+- :wrench: For developers check the [technical documentation](build/src)
 - :speech_balloon: For feedback and reporting problems please [submit an issue](https://github.com/dappnode/DNP_ADMIN/issues/new) or contact us on [RIOT•IM](https://riot.im/app/#/room/#DAppNode:matrix.org)
 
 It is an AragonApp whose repo is deployed at this address: [0x0c564ca7b948008fb324268d8baedaeb1bd47bce](https://etherscan.io/address/0x0c564ca7b948008fb324268d8baedaeb1bd47bce) and whose ENS address is: [dappmanager.dnp.dappnode.eth](https://etherscan.io/enslookup?q=dappmanager.dnp.dappnode.eth])
